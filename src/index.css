@@ -1,0 +1,9 @@
+/* @import "tailwindcss/preflight";
+@import "tailwindcss/utilities"; */
+@custom-variant dark (&:where(.dark, .dark *));
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.harmony {
+  font-family: 'Pacifico', serif;
+}
+@import "tailwindcss";
