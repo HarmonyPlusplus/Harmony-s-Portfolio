@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
 
     return (
         <>
-            <div className="navbar flex items-center justify-between py-4 text-[#131a29] px-6 md:px-24 border-b-3 border-[#e5e7eb] bg-white sticky top-0 z-50 dark:bg-gray-800 dark:text-white">
+            <div className="navbar flex items-center justify-between py-4 text-[#131a29] px-6 md:px-24   bg-white sticky top-0 z-50 dark:bg-gray-800 dark:text-white">
 
                 <Link
                     to="/"
@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
                                     duration-200 
                                     ${isActive
                                         ? "border-b-2 border-purple-600 text-purple-600"
-                                        : "text-gray-800 dark:text-white hover:border-b-2 hover:border-purple-400"
+                                        : "text-gray-800 dark:text-white "
                                     }
                                 `}
                             >
@@ -59,14 +59,14 @@ const Navbar: React.FC = () => {
 
                 <button
                     onClick={toggleMenu}
-                    className="md:hidden text-white text-2xl font-bold bg-linear-to-r from-[#4F46E5] to-[#9333EA] rounded-md"
+                    className="md:hidden text-white text-2xl font-bold dark:bg-none bg-linear-to-r from-[#4F46E5] to-[#9333EA] rounded-md"
                 >
                     ☰
                 </button>
             </div>
 
             {isOpen && (
-                <div className="fixed flex flex-col md:hidden bg-gray-700 px-6 py-4 space-y-4 h-screen w-screen text-white">
+                <div className="fixed flex flex-col md:hidden bg-white text-black dark:bg-gray-700 px-6 py-4 space-y-4 h-screen w-screen dark:text-white z-999">
                     {Navitems.map((item) => (
                         <Link key={item.id} to={item.link} onClick={toggleMenu}>
                             {item.name}
@@ -75,7 +75,7 @@ const Navbar: React.FC = () => {
                     <button
                         type="button"
                         onClick={toggleTheme}
-                        className="cursor-pointer bg-gray-800 text-white px-4 py-2 rounded-md"
+                        className="cursor-pointer dark:bg-gray-800 dark:text-white text-black bg-gray-200 px-4 py-2 rounded-md"
                     >
                         {theme === "light" ? "Light" : "Dark"}
                     </button>
