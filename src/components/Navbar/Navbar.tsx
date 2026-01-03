@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Navitems } from "./NavItems";
 import { useTheme } from "../ThemeContext/ThemeContext";
+import { IconMoon, IconSun } from "@tabler/icons-react"
 
 const Navbar: React.FC = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -24,38 +25,42 @@ const Navbar: React.FC = () => {
                 >
                     Harmony
                 </Link>
+                <div className="flex gap-4">
 
-                <div className="hidden md:flex space-x-6">
-                    {Navitems.map((item) => {
-                        const isActive = location.pathname === item.link;
+                    <div className="hidden md:flex space-x-6 items-center font-bold">
+                        {Navitems.map((item) => {
+                            const isActive = location.pathname === item.link;
 
-                        return (
-                            <Link
-                                key={item.id}
-                                to={item.link}
-                                className={`
+                            return (
+                                <Link
+                                    key={item.id}
+                                    to={item.link}
+                                    className={`
                                     pb-1 
                                     transition-all 
                                     duration-200 
                                     ${isActive
-                                        ? "border-b-2 border-purple-600 text-purple-600"
-                                        : "text-gray-800 dark:text-white "
-                                    }
+                                            ? "border-b-2 border-purple-600 text-purple-600"
+                                            : "text-gray-800 dark:text-white "
+                                        }
                                 `}
-                            >
-                                {item.name}
-                            </Link>
-                        );
-                    })}
-
-                    <button
-                        type="button"
-                        onClick={toggleTheme}
-                        className="cursor-pointer"
-                    >
-                        {theme === "light" ? "Light" : "Dark"}
-                    </button>
+                                >
+                                    {item.name}
+                                </Link>
+                            );
+                        })}
+                    </div>
+                    <div>
+                        <button
+                            type="button"
+                            onClick={toggleTheme}
+                            className="max-md:hidden flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full cursor-pointer "
+                        >
+                            {theme === "light" ? <p className="flex items-center gap-2 font-bold"><IconSun size={20} />Light</p> : <p className="flex items-center gap-2 font-bold"><IconMoon size={20} />Dark</p>}
+                        </button>
+                    </div>
                 </div>
+
 
                 <button
                     onClick={toggleMenu}
@@ -75,9 +80,9 @@ const Navbar: React.FC = () => {
                     <button
                         type="button"
                         onClick={toggleTheme}
-                        className="cursor-pointer dark:bg-gray-800 dark:text-white text-black bg-gray-200 px-4 py-2 rounded-md"
+                        className="cursor-pointer dark:bg-gray-800 dark:text-white text-black bg-gray-200 px-4 py-1 rounded-md w-fit h-15"
                     >
-                        {theme === "light" ? "Light" : "Dark"}
+                         {theme === "light" ? <p className="flex items-center gap-2 font-bold"><IconSun size={25} />Light</p> : <p className="flex items-center gap-2 font-bold"><IconMoon size={25} />Dark</p>}
                     </button>
                 </div>
             )}

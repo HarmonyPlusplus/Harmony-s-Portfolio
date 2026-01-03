@@ -4,7 +4,7 @@ import { motion } from "motion/react"
 const mySkills = () => {
     return (
 
-        <div className="py-20 backdrop-blur-sm">
+        <div className="py-20 backdrop-blur-sm max-md:py-10">
             <Title title="My Skills" subtitle="Technologies I work with" />
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mx-auto max-w-7xl px-4 mb-6 dark:text-white">
                 {skillsList.map((skill, index) => (

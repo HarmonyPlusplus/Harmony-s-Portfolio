@@ -10,7 +10,7 @@ const FeaturedProject = () => {
   }
 
   return (
-    <motion.div className="py-20 " 
+    <motion.div className="py-20 max-md:py-10 " 
       initial={{ opacity: 0, y: 80 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}

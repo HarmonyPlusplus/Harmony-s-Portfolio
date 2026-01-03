@@ -42,20 +42,18 @@ const PortfolioFilter = () => {
                 className="w-full h-full object-cover object-top transition-transform duration-500 sm:group-hover:scale-110"
               />
 
-              {/* Overlay */}
               <div
                 className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-100 sm:opacity-0 xl:group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6 pointer-events-auto xl:pointer-events-none xl:group-hover:pointer-events-auto z-10"
               >
                 <Link
-                  to={project.projectUrl}
+                  to={project.projectUrl || "/underdev"}
                   className="px-6 py-3 bg-white text-gray-900 rounded-full font-semibold whitespace-nowrap"
                 >
                   View Project
                 </Link>
               </div>
             </div>
-
-            {/* Content */}
+            
             <div className="p-4 bg-white dark:bg-gray-800">
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                 {project.name}

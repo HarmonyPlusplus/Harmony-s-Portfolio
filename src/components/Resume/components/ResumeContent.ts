@@ -6,6 +6,18 @@ interface ExperienceProps {
   done: string[];
 }
 
+interface EducationProps {
+  degree: string;
+  institution: string;
+  years: string;
+  description: string;
+}
+
+interface SkillsProps {
+  skills: string;
+  skillsset: string[];
+}
+
 export const Experiencelist: ExperienceProps[] = [
   {
     position: "Senior Frontend Developer",
@@ -41,6 +53,74 @@ export const Experiencelist: ExperienceProps[] = [
       "Developed reusable component library",
       "Participated in code reviews and pair programming",
       "Learned React, Vue.js, and modern build tools",
+    ],
+  },
+];
+
+export const Educationlist: EducationProps[] = [
+  {
+    degree: "Bachelor of Science in Computer Science",
+    institution: "University of Technology",
+    years: "2014 - 2018",
+    description:
+      "Focused on software engineering, web technologies, and user interface design. Graduated with honors.",
+  },
+  {
+    degree: "Frontend Development Bootcamp",
+    institution: "Code Academy",
+    years: "2018",
+    description:
+      "Intensive 12-week program covering modern frontend technologies, best practices, and real-world projects.",
+  },
+];
+
+export const Skillslist: SkillsProps[] = [
+  {
+    skills: "Frontend",
+    skillsset: [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Redux Toolkit",
+    ],
+  },
+  {
+    skills: "Styling",
+    skillsset: [
+      "Tailwind CSS",
+      "Sass",
+      "Styled Components",
+      "CSS Modules"
+    ],
+  },
+  {
+    skills: "Tools",
+    skillsset: [
+      "Git",
+      "Webpack",
+      "Vite",
+      "npm/yarn",
+      "VS Code"
+    ],
+  },
+  {
+    skills: "Testing",
+    skillsset: [
+      "Jest",
+      "React Testing Library",
+      "Cypress",
+      "Vitest"
+    ],
+  },
+  {
+    skills: "Other",
+    skillsset: [
+      "REST APIs",
+      "GraphQL",
+      "Responsive Design",
+      "Accessibility"
     ],
   },
 ];

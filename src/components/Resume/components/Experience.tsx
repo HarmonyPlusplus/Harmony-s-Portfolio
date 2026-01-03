@@ -2,7 +2,7 @@ import { Experiencelist } from "./ResumeContent"
 
 const Experience = () => {
   return (
-    <div className="mt-10 mx-auto max-md:px-2">
+    <div className="mt-10 mx-auto max-md:px-1">
       <h2 className="font-bold text-3xl max-sm:text-xl dark:text-white">Work Experience</h2>
             {Experiencelist.map((exp, index) => (
               <div
