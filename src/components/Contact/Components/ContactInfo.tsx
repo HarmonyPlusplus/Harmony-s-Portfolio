@@ -1,5 +1,4 @@
 import { IconMail, IconPhone, IconMapPin, IconBrandGithub, IconBrandLinkedin, IconBrandX } from "@tabler/icons-react";
-import { Link } from "react-router-dom";
 
 const ContactInfo = () => {
     const linkedinlink = import.meta.env.VITE_LINKEDIN_LINK;
@@ -43,19 +42,19 @@ const ContactInfo = () => {
                 <h3 className="dark:text-white md:text-2xl font-bold">Follow Me</h3>
                 <div className="flex flex-wrap gap-2 my-3">
                     <div className="rounded-full bg-indigo-100 dark:bg-transparent p-3">
-                        <Link to={githublink} target="_blank" rel="noopener noreferrer">
+                        <a href={githublink} target="_blank" rel="noopener noreferrer" aria-label="Github">
                         <IconBrandGithub size={24} className="text-gray-900 dark:text-white cursor-pointer hover:text-indigo-500 transition-colors" />
-                        </Link>
+                        </a>
                     </div>
                     <div className="rounded-full bg-indigo-100 dark:bg-transparent p-3">
-                        <Link to={linkedinlink} target="_blank" rel="noopener noreferrer">
+                        <a href={linkedinlink} target="_blank" rel="noopener noreferrer" aria-label="Linkedin">
                         <IconBrandLinkedin size={24} className="text-gray-900 dark:text-white cursor-pointer hover:text-indigo-500 transition-colors" />
-                        </Link>
+                        </a>
                     </div>
                     <div className="rounded-full bg-indigo-100 dark:bg-transparent p-3">
-                        <Link to={xlink} target="_blank" rel="noopener noreferrer">
+                        <a href={xlink} target="_blank" rel="noopener noreferrer" aria-label="X">
                         <IconBrandX size={24} className="text-gray-900 dark:text-white cursor-pointer hover:text-indigo-500 transition-colors" />
-                        </Link>
+                        </a>
                     </div>
 
                 </div>

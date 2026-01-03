@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import{ useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 
 const MessageInputField = () => {
@@ -50,7 +50,7 @@ const MessageInputField = () => {
           <input
             type="text"
             id="name"
-            name="name" // Ensure this matches your EmailJS template variable {{name}}
+            name="name"
             placeholder="Your name"
             required
             className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-600 dark:focus:ring-indigo-500 text-sm transition-colors"
@@ -62,7 +62,7 @@ const MessageInputField = () => {
           <input
             type="email"
             id="email"
-            name="email" // Matches {{email}}
+            name="email" 
             placeholder="you@example.com"
             required
             className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-600 dark:focus:ring-indigo-500 text-sm transition-colors"
@@ -100,7 +100,6 @@ const MessageInputField = () => {
           Send Message
         </button>
 
-        {/* Status Feedback */}
         {status && (
           <p className="mt-4 text-center text-sm font-medium text-indigo-600 dark:text-indigo-400">
             {status}
