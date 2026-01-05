@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import PortImage from '../../../assets/PortImage.jpg'
+import Harmony from "../../../assets/GoodnewsHarmony.jpeg"
 import { motion } from 'motion/react'
 import { IconCode, IconTrophy } from "@tabler/icons-react";
 const Header = () => {
@@ -30,7 +30,7 @@ const Header = () => {
                 </div>
             </div>
             <div className="flex flex-col items-center justify-center gap-4 w-full max-w-[500px] relative max-md:hidden">
-                <img className="w-full rounded-full shadow-2xl " src={PortImage} alt="Header Image" />
+                <img className="w-full rounded-full shadow-2xl " src={Harmony} alt="Header Image" />
                 <div className='flex items-center gap-1 w-fit bg-white dark:bg-gray-900 dark:text-white px-4 py-4 rounded-lg font-bold shadow-lg  border-[#e5e7eb] absolute top-0 right-0'>
                     <div><IconCode size={30} className="inline-block mr-2 mb-1 text-[#4F46E5]" /></div>
                     <div className="text-xs">
