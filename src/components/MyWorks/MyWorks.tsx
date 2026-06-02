@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Projects } from "./Components/MyWorkList";
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { motion } from "motion/react"
 
 const PortfolioFilter = () => {
   const tabs = ["All", "Web", "App", "Others"];
@@ -33,7 +34,21 @@ const PortfolioFilter = () => {
 
       <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
         {filteredProjects.map((project) => (
-          <div key={project.id} className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg">
+          <motion.div initial={{
+            opacity: 0,
+            filter: "blur(12px)",
+            y: 20,
+          }}
+            whileInView={{
+              opacity: 1,
+              filter: "blur(0px)",
+              y: 0,
+            }}
+            viewport={{ once: false }}
+            transition={{
+              duration: 1.2,
+              ease: [0.16, 1, 0.3, 1],
+            }} key={project.id} className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg">
             {/* Image Container */}
             <div className="relative aspect-4/3 overflow-hidden bg-gray-100 dark:bg-gray-700">
               <img
@@ -53,7 +68,7 @@ const PortfolioFilter = () => {
                 </Link>
               </div>
             </div>
-            
+
             <div className="p-4 bg-white dark:bg-gray-800">
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                 {project.name}
@@ -78,7 +93,7 @@ const PortfolioFilter = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

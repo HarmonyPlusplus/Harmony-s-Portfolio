@@ -20,9 +20,9 @@ interface SkillsProps {
 
 export const Experiencelist: ExperienceProps[] = [
   {
-    position: "Senior Frontend Developer",
-    company: "Tech Innovations Inc.",
-    years: "2022 - Present",
+    position: "Frontend Developer",
+    company: "FutureLabs",
+    years: "2025 - Present",
     description:
       "Leading frontend development team, architecting scalable React applications, and implementing modern UI/UX designs. Mentoring junior developers and establishing best practices.",
     done: [
@@ -34,7 +34,7 @@ export const Experiencelist: ExperienceProps[] = [
   {
     position: "Frontend Developer",
     company: "Digital Solutions Ltd.",
-    years: "2020 - 2022",
+    years: "2025",
     description:
       "Developed responsive web applications using React, Redux, and modern CSS frameworks. Collaborated with designers and backend developers to deliver high-quality products.",
     done: [
@@ -46,7 +46,7 @@ export const Experiencelist: ExperienceProps[] = [
   {
     position: "Junior Frontend Developer",
     company: "StartUp Ventures",
-    years: "2018 - 2020",
+    years: "2024 - 2025",
     description:
       "Contributed to various web projects, learned modern frontend technologies, and participated in agile development processes.",
     done: [
@@ -59,16 +59,16 @@ export const Experiencelist: ExperienceProps[] = [
 
 export const Educationlist: EducationProps[] = [
   {
-    degree: "Bachelor of Science in Computer Science",
-    institution: "University of Technology",
-    years: "2014 - 2018",
+    degree: "National Diploma in Computer Science",
+    institution: "Akwa Ibom State Polytechnic",
+    years: "2025 - present",
     description:
       "Focused on software engineering, web technologies, and user interface design. Graduated with honors.",
   },
   {
     degree: "Frontend Development Bootcamp",
-    institution: "Code Academy",
-    years: "2018",
+    institution: "Codecademy",
+    years: "2024",
     description:
       "Intensive 12-week program covering modern frontend technologies, best practices, and real-world projects.",
   },
